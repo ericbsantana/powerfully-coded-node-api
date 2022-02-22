@@ -1,7 +1,7 @@
 module.exports = {
   roots: ['<rootDir>/src'],
-  collectCoverage: true,
   collectCoverageFrom: ['<rootDir>/src/**/*.ts'],
+  coveragePathIgnorePatterns: ['index.ts', 'protocols.ts'],
   transform: {
     '.+\\.ts$': 'ts-jest'
   },
