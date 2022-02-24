@@ -16,7 +16,8 @@ export const MongoHelper = {
   },
 
   map (data, result: any): AccountModel {
+    const { name, email, password } = data
     const { insertedId: _id } = result
-    return Object.assign({}, data, { id: _id.toString() })
+    return Object.assign({}, { name, email, password }, { id: _id.toString() })
   }
 }
